@@ -1,0 +1,19 @@
+#heading {
+  h3 {
+    font-size: 5.3rem;
+    line-height: 5rem;
+    @media (max-width: map-get($grid-breakpoints, xxl)) {
+      font-size: calc(1rem + 5vw);
+      line-height: calc(1.8rem + 4vw);
+    }
+  }
+
+  .fun-image {
+    transform: rotate(-10deg);
+    width: 8rem;
+
+    @media (max-width: map-get($grid-breakpoints, xxl)) {
+      width: calc(2.5rem + 6vw);
+    }
+  }
+}

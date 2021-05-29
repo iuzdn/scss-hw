@@ -1,0 +1,128 @@
+@import '../common/variables';
+
+#cards {
+  background-color: white;
+
+  .card-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 15px;
+    z-index: 5;
+  }
+
+  h6 {
+    color: white;
+    font-size: 24px;
+    font-style: normal;
+    display: block;
+    z-index: 5;
+  }
+
+  .first-row {
+    .figure {
+      left: 0px;
+      background-color: #d2c65e;
+      height: 160px;
+      width: 322px;
+      border-radius: 96px;
+      z-index: 3;
+      position: relative;
+
+      @media (min-width: map-get($grid-breakpoints, md)) {
+        left: 12px;
+      }
+
+      @media (min-width: map-get($grid-breakpoints, lg)) {
+        left: 24px;
+        width: 555px;
+        height: 276px;
+        border-radius: 138px;
+      }
+
+      .figure-inside {
+        top: 0;
+        left: 10px;
+        background-color: #d2c65e;
+        opacity: 20%;
+        z-index: 2;
+        height: 160px;
+        width: 322px;
+        border-radius: 96px;
+        position: absolute;
+        overflow: hidden;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+          width: 555px;
+          height: 276px;
+          border-radius: 138px;
+          left: 30px;
+        }
+      }
+
+      .tilt-1 {
+        left: 30px;
+        opacity: 20%;
+        z-index: 1;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+          left: 65px;
+        }
+      }
+
+      .inter-div {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .circle {
+          position: absolute;
+          right: 15px;
+          top: 10px;
+          width: 140px;
+          height: 140px;
+          background-color: #c9bd5c;
+          border-radius: 86px;
+          z-index: 4;
+
+          @media (min-width: map-get($grid-breakpoints, lg)) {
+            top: 15px;
+            right: 20px;
+            width: 246px;
+            height: 246px;
+            border-radius: 138px;
+          }
+        }
+      }
+    }
+  }
+
+  .rectangle {
+    width: 100%;
+    width: 322px;
+    height: 160px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+      width: 555px;
+      height: 276px;
+    }
+  }
+
+  .r-blue {
+    background-color: $palette-blueish;
+  }
+
+  .r-orange {
+    background-color: $palette-orange;
+  }
+}

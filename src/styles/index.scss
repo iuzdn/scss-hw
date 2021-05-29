@@ -1,11 +1,35 @@
-body {
+@import './common/index';
+@import './components/index';
+
+body,
+p {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @include font-family($font-secondary);
 }
+
+//<------------Temporary Style---------------->//
+body {
+  background-color: $palette-gray;
+}
+
+//<-----------End Tempo Style----------------->//
+
+h1,
+h2,
+h3 {
+  @include font-family($font-primary);
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 1.11;
+}
+
+// h3 {
+//   font-size: calc(2rem + 5vw);
+//   line-height: calc(2.5rem + 5vw);
+// }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

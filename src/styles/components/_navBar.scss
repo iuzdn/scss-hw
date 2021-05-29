@@ -1,0 +1,82 @@
+@import '../common/variables';
+
+$btn-android-default: '../../assets/images/android-default.svg';
+$btn-android-hover: '../../assets/images/android-hover.svg';
+$btn-ios-default: '../../assets/images/ios-default.svg';
+$btn-ios-hover: '../../assets/images/ios-hover.svg';
+
+#nav-bar {
+  font-family: $font-thirdly;
+  font-weight: normal;
+  height: 72px;
+  // position: fixed;
+  // top: 0;
+
+  @mixin btn-class($def, $hov) {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    background: url($def) no-repeat;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:hover {
+      background: url($hov) no-repeat;
+    }
+  }
+
+  @mixin v-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-left-col {
+    @include v-center;
+    flex-shrink: 3;
+  }
+
+  .nav-right-col {
+    @include v-center;
+    @media (min-width: map-get($grid-breakpoints, xs)) {
+      .row {
+        margin-right: -8px;
+        margin-left: -8px;
+      }
+      .row > .col,
+      .row > [class*='col-'] {
+        padding-right: 8px;
+        padding-left: 8px;
+      }
+    }
+
+    div div {
+      @include v-center;
+    }
+  }
+
+  .nav-android-btn {
+    @include btn-class($btn-android-default, $btn-android-hover);
+  }
+
+  .nav-ios-btn {
+    @include btn-class($btn-ios-default, $btn-ios-hover);
+  }
+
+  .nav-link {
+    display: inline-block;
+    padding: 1.5rem 1.5rem;
+    text-decoration: none;
+    color: $palette-black;
+  }
+}
+
+.op-50 {
+  opacity: 50%;
+}
+
+.op-30 {
+  opacity: 30%;
+}

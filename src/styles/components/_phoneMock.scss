@@ -1,0 +1,27 @@
+#phone-mock {
+  $phone-tablet: '../../assets/images/mocku@2x.png';
+  $phone-desktop: '../../assets/images/mocku@3x.png';
+
+  .main-img {
+    width: 100%;
+    @media (min-width: map-get($grid-breakpoints, md)) {
+      content: url($phone-tablet);
+    }
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+      content: url($phone-desktop);
+    }
+  }
+
+  .mock-gradient {
+    height: calc(9rem + 31vw);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(
+      to top,
+      #ffffff,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0)
+    );
+  }
+}

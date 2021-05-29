@@ -1,0 +1,38 @@
+@import '../common/variables';
+
+$funText2x: '../../assets/images/the@2x.png';
+$funText3x: '../../assets/images/the@3x.png';
+
+#fun-way {
+  margin-top: 68px;
+
+  .fun-way-col {
+    position: relative;
+    padding: 86px 0;
+
+    .phone-form {
+      width: 216px;
+      height: 393.9px;
+      background-color: $palette-gray-dark;
+      border-radius: 22.4px;
+
+      @media (min-width: map-get($grid-breakpoints, md)) {
+        width: 272px;
+        height: 496px;
+      }
+    }
+
+    .phone-text {
+      position: absolute;
+      top: 230px;
+
+      @media (min-width: map-get($grid-breakpoints, sm )) {
+        padding: 0 2rem;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
