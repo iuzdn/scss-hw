@@ -9,6 +9,7 @@ import {
   Cards,
   AugReality,
   FunWayToRide,
+  FloatingScreens,
 } from './components';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Cards />
       <AugReality />
       <FunWayToRide />
+      <FloatingScreens />
       <p>Here is some text</p>
     </div>
   );

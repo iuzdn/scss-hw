@@ -5,3 +5,4 @@ export { default as Tab } from './Tab';
 export { default as Cards } from './Cards';
 export { default as AugReality } from './AugReality';
 export { default as FunWayToRide } from './FunWayToRide';
+export { default as FloatingScreens } from './FloatingScreens';
