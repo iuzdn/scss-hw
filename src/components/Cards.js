@@ -6,7 +6,7 @@ import bus from '../assets/images/Transport.svg';
 
 export default function Cards() {
   return (
-    <div id="cards" className="row pt-4">
+    <div id="cards" className="row pt-4 pb-4">
       <div className="col-12 py-3 first-row mb-2">
         <div className="figure">
           <div className="inter-div">

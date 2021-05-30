@@ -1,0 +1,176 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+$iPhoneX2x: '../../assets/images/iPhone X@2x.png';
+$iPhoneX3x: '../../assets/images/iPhone X@3x.png';
+
+$ios-img: '../../assets/images/Apple_logo.svg';
+$android-img: '../../assets/images/play_market.svg';
+
+#footer {
+  background-color: black;
+  border-top: 1px solid black;
+  margin-top: 0;
+
+  .iPhone-x {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 54px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: map-get($grid-breakpoints, md )) {
+      max-width: 540px;
+      margin-top: 209px;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, xl )) {
+      max-width: 710px;
+      margin-top: 134px;
+    }
+
+    .black-phone-img {
+      @media (min-width: map-get($grid-breakpoints, md )) {
+        content: url($iPhoneX2x);
+      }
+
+      @media (min-width: map-get($grid-breakpoints, xl )) {
+        content: url($iPhoneX3x);
+      }
+    }
+
+    .carpool-graph {
+      position: absolute;
+      height: 211px;
+      width: 251px;
+      top: 2px;
+      left: 10px;
+
+      @media (min-width: map-get($grid-breakpoints, md )) {
+        height: 592px;
+        width: 635px;
+        top: 60px;
+        left: -165px;
+      }
+
+      @media (min-width: map-get($grid-breakpoints, xl )) {
+        height: 592px;
+        width: 707px;
+        top: 266px;
+        left: -300px;
+      }
+
+      .Tilt-inner {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .iphone-gradient {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 133.3px;
+      background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));
+
+      @media (min-width: map-get($grid-breakpoints, md )) {
+        height: 273px;
+        bottom: -36px;
+      }
+    }
+
+    .black-phone-img {
+      width: 191px;
+      height: 380px;
+
+      @media (min-width: map-get($grid-breakpoints, md )) {
+        width: 520px;
+        height: 1039px;
+      }
+
+      @media (min-width: map-get($grid-breakpoints, xl )) {
+        width: 689px;
+        height: 1376px;
+      }
+    }
+  }
+
+  .iphone-text {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    color: white;
+
+    @media (min-width: map-get($grid-breakpoints, md )) {
+      top: -92px;
+    }
+
+    h3 {
+      line-height: 1.11;
+      font-size: 2.3rem;
+
+      @media (min-width: map-get($grid-breakpoints, md )) {
+        font-size: 4.5rem;
+      }
+    }
+
+    p {
+      width: 200px;
+      margin: auto;
+      color: #c0c0c0;
+
+      @media (min-width: map-get($grid-breakpoints, md )) {
+        width: 100%;
+        line-height: 1.5;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  .iphone-buttons {
+    margin-top: 60px;
+    padding-bottom: 2rem;
+    border-bottom: 8px solid $palette-orange;
+    position: relative;
+
+    @media (min-width: map-get($grid-breakpoints, md )) {
+      margin-top: 207px;
+      padding-bottom: 143px;
+      border-bottom: 16px solid $palette-orange;
+    }
+
+    .download-btn {
+      @include font-family($font-secondary);
+      text-align: left;
+      padding-left: 55px;
+      display: inline-block;
+      border: 1px solid #5b5b5b;
+      color: white;
+      border-radius: 8px;
+      margin: 0;
+      width: 238px;
+      height: 64px;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-color: black;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    .ios-btn {
+      background-image: url($ios-img);
+      background-position: 19px 17px;
+    }
+
+    .android-btn {
+      background-image: url($android-img);
+      background-position: 15px 15px;
+    }
+  }
+}

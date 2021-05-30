@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import logo from '../assets/images/Logo.svg';
 
-export default function NavBar() {
+export default function NavBar({ handleChange }) {
+  const [activeElement, setActiveElement] = useState('#Now');
+
+  const isActive = tab => {
+    return tab === activeElement ? true : false;
+  };
+
   return (
     <div className="fixed-top container-xxl">
       <div id="nav-bar" className="row bg-white">
@@ -14,16 +20,32 @@ export default function NavBar() {
               </a>
             </div>
             <div className="col d-none col-lg-auto d-lg-inline-block">
-              <a href="#home" className="nav-link">
+              <a
+                href="#heading"
+                className={`nav-link ${isActive('#Now') && 'active'}`}
+                onClick={() => setActiveElement('#Now')}
+              >
                 Now
               </a>
-              <a href="#link" className="op-50 nav-link">
+              <a
+                href="#tab"
+                className={`nav-link ${isActive('#ride') && 'active'}`}
+                onClick={() => setActiveElement('#ride')}
+              >
                 How to ride
               </a>
-              <a href="#link" className="op-50 nav-link">
+              <a
+                href="#tab"
+                className={`nav-link ${isActive('#drive') && 'active'}`}
+                onClick={() => setActiveElement('#drive')}
+              >
                 How to drive
               </a>
-              <a href="#link" className="op-30 nav-link">
+              <a
+                href="#cards"
+                className={`nav-link ${isActive('#features') && 'active'}`}
+                onClick={() => setActiveElement('#features')}
+              >
                 Features
               </a>
             </div>

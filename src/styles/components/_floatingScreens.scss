@@ -1,22 +1,24 @@
 #floating-screens {
   height: 480px;
   position: relative;
+  margin-bottom: 0;
+  border-bottom: 1px solid black;
 
   @media (min-width: map-get($grid-breakpoints, md)) {
     height: 811px;
   }
 
   .video-text-container {
-    margin-top: 204px;
+    position: absolute;
+    bottom: 60px;
     color: white;
 
     @media (min-width: map-get($grid-breakpoints, md )) {
-      margin-top: 370px;
       padding: 0 2rem;
+      bottom: 89px;
     }
 
     @media (min-width: map-get($grid-breakpoints, lg)) {
-      margin-top: 529px;
     }
 
     h3 {
@@ -50,9 +52,10 @@
 
   .back-gradient {
     position: absolute;
+    bottom: 0;
     z-index: -1;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+    background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));
   }
 }

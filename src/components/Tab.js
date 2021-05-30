@@ -17,7 +17,6 @@ export default function Tab() {
   const InnerTab = () => {
     const imgClasses = isPassenger ? 'passenger-img' : 'driver-img';
     const tabClasses = isPassenger ? 'cars-tab' : 'pass-tab';
-    console.log(imgClasses);
 
     return (
       <div className={`inner-tab row ${tabClasses}`}>

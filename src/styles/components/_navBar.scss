@@ -70,6 +70,15 @@ $btn-ios-hover: '../../assets/images/ios-hover.svg';
     padding: 1.5rem 1.5rem;
     text-decoration: none;
     color: $palette-black;
+    opacity: 50%;
+
+    &:hover {
+      opacity: 30%;
+    }
+  }
+
+  .active {
+    opacity: 100%;
   }
 }
 
