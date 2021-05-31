@@ -1,0 +1,50 @@
+$container: '../../assets/images/container.png';
+$container2x: '../../assets/images/container@2x.png';
+$container3x: '../../assets/images/container@3x.png';
+
+$mock: '../../assets/images/mock.png';
+$mock2x: '../../assets/images/mock@2x.png';
+$mock3x: '../../assets/images/mock@3x.png';
+
+#aug-reality {
+  .pixeled-back {
+    height: 680px;
+    background-image: url($container);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @media (min-width: map-get($grid-breakpoints, md)) {
+      background-image: url($container2x);
+      margin: 2rem;
+      border-radius: 4px;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+      background-image: url($container3x);
+    }
+
+    .pixeled-phone {
+      background-image: url($mock);
+      height: 601.2px;
+      width: 301px;
+      position: absolute;
+      top: 146px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @media (min-width: map-get($grid-breakpoints, md )) {
+        background-image: url($mock2x);
+      }
+
+      @media (min-width: map-get($grid-breakpoints, lg )) {
+        background-image: url($mock3x);
+      }
+    }
+  }
+}
